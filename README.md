@@ -26,8 +26,7 @@ src/
   ├── components/       # Reusable UI components
   ├── pages/            # Application pages
   ├── store/            # Redux store configuration
-  ├── utils/            # Utility functions and API services
-  └── assets/           # Static assets
+  └── utils/            # Utility functions and API services
 ```
 
 ## Absolute Imports
@@ -50,9 +49,6 @@ Available aliases:
 - `@pages/*` → `./src/pages/*`
 - `@store/*` → `./src/store/*`
 - `@utils/*` → `./src/utils/*`
-- `@assets/*` → `./src/assets/*`
-
-See `docs/absolute-imports.md` for more details.
 
 ## Getting Started
 
@@ -102,32 +98,8 @@ Preview the production build:
 
 ```bash
 npm run preview
-```
-
-## ESLint Configuration
-
-This project uses ESLint with TypeScript support. If you're developing a production application, consider updating the configuration to enable type-aware lint rules as shown below:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
 
 ## License
 
 MIT
+```
